@@ -6,7 +6,7 @@ const router = express.Router();
 const product_controller = require('../controllers/product.controller');
 
 //Url de prueba
-router.get('/', product_controller.index, function(req, res){
+router.get('/',  function(req, res){
     res.render('start');
 });
 
