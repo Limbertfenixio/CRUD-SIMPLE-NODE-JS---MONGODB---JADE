@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "node app.js"
+    "start": "node app.js"
   },
   "author": "Limbert Canqui Tambo",
   "license": "ISC"
