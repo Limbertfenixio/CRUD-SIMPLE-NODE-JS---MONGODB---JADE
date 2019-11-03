@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+html(lang="es")
+head
+  meta(charset="UTF-8")
+  title Editar producto
+  link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous", rel="stylesheet")
+body
+  .container
+    h1.text-center Editar un producto
+
+    form(method="post", action="/products/" + product.id + "/update").mt-5
+        input(name='_method', value='PUT', type='hidden')
+        fieldset
+        .form-group    
+            label Nombre de producto:
+            input(type="text", placeholder="Ingrese el nombre de producto", name="nombre", value="#{product.nombre}").form-control
+        .form-group
+            label Precio
+            input(type="text", placeholder="Cantidad" ,name="precio", value="#{product.precio}").form-control
+
+        button(type="submit").btn.btn-primary Modificar Producto

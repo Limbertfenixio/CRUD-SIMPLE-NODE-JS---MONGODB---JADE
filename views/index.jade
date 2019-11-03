@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+html(lang='es')
+head
+    title Productos
+    link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T", crossorigin="anonymous", rel="stylesheet")
+body
+    .container
+        h1.text-center Productos
+        table.table
+            thead
+                tr
+                    th(scope="col") #
+                    th(scope="col") Nombre Producto
+                    th(scope="col") Precio
+                    th(scope="col") Acciones
+            tbody
+                each product, index in productos
+                    tr
+                        th(scope="row")=index
+                        td #{product.nombre}
+                        td #{product.precio}
+                        td
+                            a(href="/products/#{product.id}/edit").btn.btn-warning Editar
+                            a(href="/products/#{product.id}/delete").btn.btn-danger.ml-1 Eliminar
+                tr
+                    td(colspan="3")
+                    td
+                        a(href='/products/create').btn.btn-success Añadir nuevo
