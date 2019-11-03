@@ -30,6 +30,10 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
+//Url de prueba
+app.get('/',  function(req, res){
+    res.render('start');
+});
 //Usamos la ruta /product/ruta importada
 app.use('/products', product)
 app.set('port' , process.env.PORT || 3000)
