@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
-//Usamos la ruta /produtct/ruta importada
+//Usamos la ruta /product/ruta importada
 app.use('/products', product)
 app.set('port' , process.env.PORT || 3000)
 

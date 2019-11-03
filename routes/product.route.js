@@ -6,7 +6,9 @@ const router = express.Router();
 const product_controller = require('../controllers/product.controller');
 
 //Url de prueba
-router.get('/', product_controller.index);
+router.get('/', product_controller.index, function(req, res){
+    res.render('start');
+});
 
 //Ruta de formulario para la creacion de productos
 router.get('/create', product_controller.product_create)
