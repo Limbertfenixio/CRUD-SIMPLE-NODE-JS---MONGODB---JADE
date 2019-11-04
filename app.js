@@ -16,8 +16,7 @@ db.on('error', console.error.bind(console,'MongoDB connexion error'))
     const collection = client.db('crudsimplenode').collection('products');
     client.close();
 })*/
-//client.on('error', console.error.bind(console, 'MongoDb connect error : '));
-
+//client.on('error', console.error.bind(console, 'MongoDb connect error : ')
 
 const app = express();
 
